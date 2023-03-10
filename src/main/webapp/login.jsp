@@ -6,15 +6,17 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%
-  String userName = request.getParameter("userName");
-  String userPassword = request.getParameter("userPassword");
-  if (userName == null) {
-  } else if (userName.equals("admin") && userPassword.equals("password")) {
+  String method = request.getMethod();
+
+  if (method.equals("POST")) {
+    String userName = request.getParameter("userName");
+    String userPassword = request.getParameter("userPassword");
+    if (userName.equals("admin") && userPassword.equals("password")) {
       response.sendRedirect("/profile.jsp");
     } else{
       response.sendRedirect("/login.jsp");
+    }
   }
-
 
 %>
 
@@ -25,9 +27,9 @@
 </head>
 <body>
   <form action = "/login.jsp" method = "POST">
-    <lable>username</lable>
+    <lable for="username">username</lable>
     <input name="userName" type="text" placeholder="username">
-    <lable>password</lable>
+    <lable for="password">password</lable>
     <input name="userPassword" type="password" placeholder="password">
     <button>submit</button>
   </form>
