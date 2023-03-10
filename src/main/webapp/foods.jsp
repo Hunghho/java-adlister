@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%@ page import="java.util.*" %><%--
   Created by IntelliJ IDEA.
   User: hungho
@@ -33,5 +35,11 @@
 <body>
     <h1>Food Type: ${foodType}</h1>
     <h3>${foods}</h3>
+<ul>
+    <c:forEach var="food" items="${foods}">
+        <li>${food}</li>
+    </c:forEach>
+</ul>
+
 </body>
 </html>

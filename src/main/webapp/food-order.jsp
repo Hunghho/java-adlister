@@ -11,6 +11,8 @@
     <title>Food Order</title>
 </head>
 <body>
+<%@ include file="partials/navbar.jsp"%>
+
 <h1>Food Order Form</h1>
 <form action="/foods.jsp">
   <select name ="food" id="food">
@@ -19,6 +21,7 @@
   </select>
   <button>Submit</button>
 </form>
+<script src ="./js/my-script.js" ></script>
 
 </body>
 </html>
