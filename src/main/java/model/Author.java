@@ -1,7 +1,6 @@
 package model;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 
 public class Author implements Serializable {
     private int id;
@@ -10,7 +9,7 @@ public class Author implements Serializable {
 
     private String last_name;
 
-    private ArrayList<Quote> quotes;
+//    private ArrayList<Quote> quotes;
 
     public int getId() {
         return id;
@@ -36,13 +35,13 @@ public class Author implements Serializable {
         this.last_name = last_name;
     }
 
-    public ArrayList<Quote> getQuotes() {
-        return quotes;
-    }
-
-    public void setQuotes(ArrayList<Quote> quotes) {
-        this.quotes = quotes;
-    }
+//    public ArrayList<Quote> getQuotes() {
+//        return quotes;
+//    }
+//
+//    public void setQuotes(ArrayList<Quote> quotes) {
+//        this.quotes = quotes;
+//    }
 
     public Author() {
     }

@@ -14,15 +14,9 @@ public class BeanTest {
             System.out.println(album.getArtist());
         }
 
-        Quote quote1 = new Quote();
-        Quote quote2 = new Quote();
-        Quote quote3 = new Quote();
 
-        quote1.setText("be water, my friend");
-        quote2.setText("board dont fight back!");
-        quote3.setText("empty your mind.");
 
-        ArrayList<Quote> quotes = new ArrayList<>(List.of(quote1, quote2, quote3));
+
 
         Author author1 = new Author();
         Author author2 = new Author();
@@ -33,22 +27,22 @@ public class BeanTest {
         author2.setFirst_name("Terminator");
         author3.setFirst_name("shaggy");
 
-        author1.setQuotes(quotes);
+        Quote quote1 = new Quote("be water, my friend", author1);
+        Quote quote2 = new Quote("board dont fight back!", author1);
+        Quote quote3 = new Quote("empty your mind.", author1);
+
+        ArrayList<Quote> quotes = new ArrayList<>(List.of(quote1, quote2, quote3));
+            for(Quote quote : quotes){
+                System.out.println(quote.getAuthor().getFirst_name() + " " + quote.getAuthor().getFirst_name()
+                + " \"" + quote.getText() + "\"");
+            }
 
         ArrayList<Author> authors = new ArrayList<>(List.of(author1, author2, author3));
 
 //        for(Author author : authors){
-           for(Quote quote : author1.getQuotes()){
-               System.out.println(author1.getFirst_name() + " " + author1.getLast_name() + " \"" + quote.getText() + "\"");
-           }
+//           for(Quote quote : author1.getQuotes()){
+//               System.out.println(author1.getFirst_name() + " " + author1.getLast_name() + " \"" + quote.getText() + "\"");
+//           }
 //        }
-
-
-
-
-
-
-
-
     }
 }

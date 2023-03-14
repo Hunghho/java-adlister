@@ -7,6 +7,16 @@ public class Quote implements Serializable {
 
   private String text;
 
+  private Author author;
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
+    }
+
     public int getId() {
         return id;
     }
@@ -24,5 +34,10 @@ public class Quote implements Serializable {
     }
 
     public Quote() {
+    }
+
+    public Quote(String text, Author author) {
+        this.text = text;
+        this.author = author;
     }
 }
